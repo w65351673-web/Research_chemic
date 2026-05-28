@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Allow: /products
+Allow: /products/*
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /shipping
+Allow: /terms
+Allow: /privacy
+Allow: /refund
+
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/
+Disallow: /api/*
+Disallow: /cart
+Disallow: /checkout
+Disallow: /checkout/*
+Disallow: /profile
+Disallow: /auth/
+Disallow: /auth/*
+Disallow: /login
+
+Sitemap: https://synthapuresite.com/sitemap.xml

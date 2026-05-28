@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- White background -->
+  <rect width="32" height="32" rx="8" fill="#ffffff"/>
+  <!-- Sky-blue border ring -->
+  <rect x="2" y="2" width="28" height="28" rx="6" fill="none" stroke="rgba(14,165,233,0.5)" stroke-width="1.5"/>
+  <!-- Orbital ellipse 1 -->
+  <ellipse cx="16" cy="16" rx="11" ry="4.5" fill="none" stroke="rgba(14,165,233,0.5)" stroke-width="1" transform="rotate(0,16,16)"/>
+  <!-- Orbital ellipse 2 -->
+  <ellipse cx="16" cy="16" rx="11" ry="4.5" fill="none" stroke="rgba(56,189,248,0.4)" stroke-width="1" transform="rotate(60,16,16)"/>
+  <!-- Orbital ellipse 3 -->
+  <ellipse cx="16" cy="16" rx="11" ry="4.5" fill="none" stroke="rgba(56,189,248,0.4)" stroke-width="1" transform="rotate(-60,16,16)"/>
+  <!-- Centre nucleus -->
+  <circle cx="16" cy="16" r="3.2" fill="#0ea5e9"/>
+  <circle cx="16" cy="16" r="1.8" fill="#38bdf8"/>
+</svg>

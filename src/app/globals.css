@@ -1,0 +1,266 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+:root {
+
+  --foreground-rgb: 17, 24, 39;
+
+  --background-start-rgb: 255, 255, 255;
+
+  --background-end-rgb: 249, 250, 251;
+
+}
+
+
+
+body {
+
+  color: rgb(var(--foreground-rgb));
+
+  background: linear-gradient(
+
+    to bottom,
+
+    rgb(var(--background-start-rgb)),
+
+    rgb(var(--background-end-rgb))
+
+  );
+
+  min-height: 100vh;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+
+/* Image Protection - Prevent easy downloads */
+
+img, picture {
+
+  -webkit-user-drag: none;
+
+  -khtml-user-drag: none;
+
+  -moz-user-drag: none;
+
+  -o-user-drag: none;
+
+  user-drag: none;
+
+  user-select: none;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  -webkit-touch-callout: none;
+
+}
+
+
+
+/* Animations */
+
+@keyframes spin-slow {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+
+.animate-spin-slow {
+
+  animation: spin-slow 20s linear infinite;
+
+}
+
+
+
+/* Accessibility utilities */
+
+.sr-only {
+
+  position: absolute;
+
+  width: 1px;
+
+  height: 1px;
+
+  padding: 0;
+
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border-width: 0;
+
+}
+
+
+
+.focus\:not-sr-only:focus {
+
+  position: static;
+
+  width: auto;
+
+  height: auto;
+
+  padding: inherit;
+
+  margin: inherit;
+
+  overflow: visible;
+
+  clip: auto;
+
+  white-space: normal;
+
+}
+
+
+
+/* Enhanced focus states for better accessibility */
+
+*:focus-visible {
+
+  outline: 2px solid #0ea5e9;
+
+  outline-offset: 2px;
+
+}
+
+
+
+button:focus-visible,
+
+a:focus-visible,
+
+input:focus-visible,
+
+textarea:focus-visible,
+
+select:focus-visible {
+
+  outline: 2px solid #0ea5e9;
+
+  outline-offset: 2px;
+
+}
+
+
+
+/* Improved color contrast for accessibility */
+
+.text-gray-400 {
+
+  color: #9ca3af !important; /* Ensures minimum 4.5:1 contrast ratio */
+
+}
+
+
+
+.text-gray-500 {
+
+  color: #6b7280 !important;
+
+}
+
+
+
+/* Ensure links have sufficient contrast */
+
+a {
+
+  text-decoration-skip-ink: auto;
+
+}
+
+
+
+a:not([class]) {
+
+  text-decoration-thickness: max(0.08em, 1px);
+
+  text-underline-offset: 0.15em;
+
+}
+
+
+
+/* Respect user's motion preferences for accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+
+  *::before,
+
+  *::after {
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+}
+
+
+
+@layer components {
+
+  .btn-primary {
+
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded transition-colors duration-200 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2;
+
+  }
+
+  
+
+  .btn-secondary {
+
+    @apply bg-secondary hover:bg-secondary-dark text-white font-semibold py-2 px-4 rounded transition-colors duration-200 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2;
+
+  }
+
+  
+
+  .card {
+
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-200 hover:scale-[1.02] border border-gray-200;
+
+  }
+
+}
+
