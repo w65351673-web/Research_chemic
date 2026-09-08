@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram, FaTelegram, FaDna, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { FaDna, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { HiOutlineArrowRight as HiArrowRight } from 'react-icons/hi';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -12,28 +12,14 @@ const footerLinks = {
     { href: '/products?category=cannabinoids', label: 'Cannabinoids' },
     { href: '/products?category=opioids', label: 'Opioids' },
     { href: '/products?category=nitazenes', label: 'Nitazenes' },
-    { href: '/products?category=etomidate', label: 'Etomidate' },
     { href: '/products?category=research%20chemicals', label: 'Research Chemicals' },
   ],
   Company: [
     { href: '/about', label: 'About Us' },
-    { href: '/contact', label: 'Contact' },
     { href: '/faq', label: 'FAQ' },
     { href: '/shipping', label: 'Shipping Info' },
   ],
-  Legal: [
-    { href: '/terms', label: 'Terms & Conditions' },
-    { href: '/privacy', label: 'Privacy Policy' },
-    { href: '/refund', label: 'Refund Policy' },
-  ],
 };
-
-const socials = [
-  { href: '#', Icon: FaFacebook, label: 'Facebook' },
-  { href: '#', Icon: FaTwitter, label: 'Twitter' },
-  { href: '#', Icon: FaInstagram, label: 'Instagram' },
-  { href: '#', Icon: FaTelegram, label: 'Telegram' },
-];
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -54,7 +40,7 @@ export default function Footer() {
         <span className="font-black text-transparent leading-none" style={{ fontSize: 'clamp(4rem,14vw,12rem)', WebkitTextStroke: '1px rgba(14,165,233,0.06)', marginTop: '-0.15em' }}>BuyResearchChems</span>
       </div>{/* Main grid */}
       <div className="relative z-10 container mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 lg:gap-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-14">
 
           {/* Brand ï¿½ spans 2 cols */}
           <div className="col-span-2 space-y-6">
@@ -79,15 +65,6 @@ export default function Footer() {
               <a href="https://wa.me/10000000000" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-900 hover:text-emerald-400 transition-colors">
                 <FaWhatsapp className="text-emerald-700 text-xs shrink-0" /> WhatsApp Support
               </a>
-            </div>
-
-            {/* Socials */}
-            <div className="flex items-center gap-2">
-              {socials.map(({ href, Icon, label }) => (
-                <a key={label} href={href} aria-label={label} className="w-9 h-9 flex items-center justify-center rounded-xl bg-white hover:bg-sky-50 text-gray-900 hover:text-sky-500 border border-gray-200 hover:border-sky-300 transition-all shadow-sm">
-                  <Icon size={13} />
-                </a>
-              ))}
             </div>
           </div>
 
@@ -125,9 +102,8 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="relative z-10 border-t border-gray-200">
-        <div className="container mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="container mx-auto px-6 py-5 flex items-center justify-center">
           <p className="text-gray-900 text-xs">&copy; {new Date().getFullYear()} BuyResearchChems. All rights reserved.</p>
-          <p className="text-gray-900 text-xs italic">All products are strictly for research &amp; laboratory use only.</p>
         </div>
       </div>
 

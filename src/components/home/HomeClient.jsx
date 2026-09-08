@@ -301,7 +301,7 @@ function CTABanner() {
             <Link href="/products" className="group inline-flex items-center gap-2.5 bg-white text-sky-700 font-black px-10 py-4 rounded-2xl transition-all hover:bg-sky-50 hover:-translate-y-1 shadow-2xl text-sm">
               Shop Now <HiArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/contact" className="inline-flex items-center gap-2 border border-white/30 text-white hover:text-white hover:border-white/60 font-bold px-10 py-4 rounded-2xl transition-all hover:-translate-y-1 text-sm">Contact Us</Link>
+            <a href="mailto:info@buyresearchchems.com" className="inline-flex items-center gap-2 border border-white/30 text-white hover:text-white hover:border-white/60 font-bold px-10 py-4 rounded-2xl transition-all hover:-translate-y-1 text-sm">Contact Us</a>
           </div>
         </FadeUp>
       </div>

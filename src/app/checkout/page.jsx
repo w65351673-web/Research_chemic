@@ -154,10 +154,10 @@ export default function CheckoutPage() {
               <p className="text-gray-900 text-xs mb-4 leading-relaxed">
                 Questions about your order? Our team is here to assist.
               </p>
-              <Link href="/contact"
+              <a href="mailto:info@buyresearchchems.com"
                 className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 text-sm font-medium transition-colors">
-                Contact Support â†’
-              </Link>
+                Contact Support &rarr;
+              </a>
             </div>
           </div>
         </div>

@@ -41,7 +41,6 @@ export const secondaryKeywords = [
   'buy research chemicals online',
   'opioids',
   'nitazenes',
-  'etomidate',
   'cannabinoids for research',
   'chemical compounds',
   'laboratory grade chemicals'
@@ -85,7 +84,7 @@ export const getOrganizationSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'BuyResearchChems',
-  description: 'Premium research chemicals supplier — synthetic cannabinoids, opioids, nitazenes, etomidate and laboratory-grade compounds for scientific research.',
+  description: 'Premium research chemicals supplier — synthetic cannabinoids, opioids, nitazenes and laboratory-grade compounds for scientific research.',
   url: getBaseUrl(),
   logo: {
     '@type': 'ImageObject',
@@ -105,7 +104,7 @@ export const getWebsiteSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'BuyResearchChems',
-  description: 'Premium research chemicals — synthetic cannabinoids, opioids, nitazenes, etomidate and laboratory compounds.',
+  description: 'Premium research chemicals — synthetic cannabinoids, opioids, nitazenes and laboratory compounds.',
   url: getBaseUrl(),
   potentialAction: {
     '@type': 'SearchAction',

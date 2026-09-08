@@ -123,7 +123,7 @@ export async function PUT(request, { params: paramsPromise }) {
     let category = submittedCategory.toLowerCase();
     
     // Validate against allowed categories
-    const validCategories = ['cannabinoids', 'opioids', 'nitazenes', 'etomidate', 'research chemicals'];
+    const validCategories = ['cannabinoids', 'opioids', 'nitazenes', 'research chemicals'];
     if (!validCategories.includes(category)) {
       console.warn(`Invalid category submitted during edit: ${category}. Preserving original category: ${product.category}`);
       category = product.category; // Keep the original category if the new one is invalid

@@ -17,7 +17,7 @@ const productSchema = new mongoose.Schema({
     // Allow only specific categories
     validate: {
       validator: function(v) {
-        return ['cannabinoids', 'opioids', 'nitazenes', 'etomidate', 'research chemicals'].includes(v.toLowerCase());
+        return ['cannabinoids', 'opioids', 'nitazenes', 'research chemicals'].includes(v.toLowerCase());
       },
       message: props => `${props.value} is not a valid category`
     }

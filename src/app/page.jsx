@@ -11,7 +11,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://buyresearchchems.c
 export const metadata = {
   metadataBase: new URL(BASE_URL),
   title: 'BuyResearchChems | Buy Research Chemicals Online — Premium Quality',
-  description: 'Buy premium research chemicals online. BuyResearchChems supplies synthetic cannabinoids (5cl-adba, jwh-018, adb-butinaca), opioids, nitazenes, etomidate and laboratory-grade compounds. Fast discreet shipping worldwide.',
+  description: 'Buy premium research chemicals online. BuyResearchChems supplies synthetic cannabinoids (5cl-adba, jwh-018, adb-butinaca), opioids, nitazenes and laboratory-grade compounds. Fast discreet shipping worldwide.',
   keywords: [
     'buy research chemicals online',
     'research chemicals',
@@ -19,7 +19,7 @@ export const metadata = {
     '5cl-adba', '5cladba', '5fadb', 'jwh-018',
     'adb-butinaca', 'ab-pinaca', '5F-EDMB-PINACA',
     'ADB-FUBINACA', '4FADB', 'AMB-FUBINACA', 'MDMB-4en-PINACA',
-    'opioids', 'nitazenes', 'etomidate',
+    'opioids', 'nitazenes',
     'laboratory chemicals',
     'premium research chemicals', 'BuyResearchChems',
   ],
@@ -32,7 +32,7 @@ export const metadata = {
     url: BASE_URL,
     siteName: 'BuyResearchChems',
     title: 'BuyResearchChems | Buy Research Chemicals Online — Premium Quality',
-    description: 'Premium synthetic cannabinoids, opioids, nitazenes, etomidate and laboratory compounds. Worldwide discreet shipping. Shop BuyResearchChems today.',
+    description: 'Premium synthetic cannabinoids, opioids, nitazenes and laboratory compounds. Worldwide discreet shipping. Shop BuyResearchChems today.',
     images: [
       {
         url: `${BASE_URL}/images/logo.png`,
@@ -45,7 +45,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'BuyResearchChems | Buy Research Chemicals Online',
-    description: 'Premium synthetic cannabinoids, opioids, nitazenes, etomidate and laboratory compounds. Worldwide discreet shipping.',
+    description: 'Premium synthetic cannabinoids, opioids, nitazenes and laboratory compounds. Worldwide discreet shipping.',
     images: [`${BASE_URL}/images/logo.png`],
   },
 };

@@ -13,12 +13,12 @@ const slides = [
     image: '/images/Laboratory-Science.jpg',
     imagePos: 'object-center',
     pill: { color: 'bg-sky-500/20 border-sky-400/30', dot: 'bg-sky-400', text: 'text-sky-300', label: 'Quality Promise' },
-    headline: 'Uncompromising',
-    accent: 'Quality. Always.',
+    headline: 'Lab-Verified Purity.',
+    accent: 'Zero Compromise.',
     accentColor: 'from-sky-300 via-cyan-300 to-sky-400',
-    sub: 'Every compound we supply undergoes rigorous independent testing. You receive a full Certificate of Analysis with every order â€” because your research deserves nothing less.',
+    sub: "Don't risk your research on unverified sources. Every compound ships with an independent Certificate of Analysis, so you know exactly what you're getting — every single time.",
     href: '/products',
-    cta: 'Browse Catalog',
+    cta: 'Shop Verified Compounds',
     ctaStyle: 'bg-sky-500 hover:bg-sky-400 shadow-sky-900/40',
     overlay: 'from-gray-900 via-gray-900/90 to-gray-900/60',
     stats: [
@@ -32,12 +32,12 @@ const slides = [
     image: '/images/GettyImages-563374209.png',
     imagePos: 'object-top',
     pill: { color: 'bg-sky-500/20 border-sky-400/30', dot: 'bg-sky-400', text: 'text-sky-300', label: 'Worldwide Delivery' },
-    headline: 'Fast. Reliable.',
-    accent: 'Worldwide.',
+    headline: 'Delivered Fast.',
+    accent: 'Anywhere on Earth.',
     accentColor: 'from-sky-300 via-cyan-300 to-sky-400',
-    sub: 'We deliver to over 50 countries with express and standard courier options. Every shipment is carefully packaged and fully tracked from the moment it leaves our facility.',
+    sub: 'Your order dispatched within 48 hours, discreetly packaged and fully tracked to over 50 countries. No customs headaches, no delays — just reliable delivery you can count on.',
     href: '/products',
-    cta: 'View Products',
+    cta: 'Start Your Order',
     ctaStyle: 'bg-sky-500 hover:bg-sky-400 shadow-sky-900/40',
     overlay: 'from-gray-900 via-gray-900/90 to-gray-900/60',
     stats: [
@@ -51,12 +51,12 @@ const slides = [
     image: '/images/MA_0449a.webp',
     imagePos: 'object-center',
     pill: { color: 'bg-sky-500/20 border-sky-400/30', dot: 'bg-sky-400', text: 'text-sky-300', label: 'Trusted Supplier' },
-    headline: 'One Source.',
-    accent: 'Endless Possibilities.',
+    headline: '500+ Compounds.',
+    accent: 'One Trusted Source.',
     accentColor: 'from-sky-300 via-cyan-300 to-sky-400',
-    sub: 'From cannabinoids and opioids to novel research chemicals â€” over 500 verified compounds available from a single trusted supplier. Expert support available whenever you need it.',
+    sub: 'Stop juggling multiple suppliers. From cannabinoids to novel research chemicals, get everything you need from one verified source — backed by 24/7 expert support whenever you need it.',
     href: '/products',
-    cta: 'Get Started',
+    cta: 'Explore Our Range',
     ctaStyle: 'bg-sky-500 hover:bg-sky-400 shadow-sky-900/40',
     overlay: 'from-gray-900 via-gray-900/90 to-gray-900/60',
     stats: [
@@ -176,7 +176,7 @@ export default function HeroCarousel() {
         >
           <Image src={slide.image} alt="" fill className={`object-cover ${slide.imagePos}`} priority sizes="100vw" />
           <div className={`absolute inset-0 bg-gradient-to-r ${slide.overlay}`} />
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-gray-900 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent" />
         </motion.div>
       </AnimatePresence>
 
@@ -222,7 +222,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 h-full container mx-auto px-6 flex flex-col justify-center pt-20 pb-24">
+      <div className="relative z-10 h-full container mx-auto px-6 flex flex-col justify-end pt-20 pb-28">
         <div className="max-w-2xl">
           <AnimatePresence mode="wait">
             <motion.div
@@ -249,7 +249,7 @@ export default function HeroCarousel() {
               </motion.h1>
 
               {/* Description */}
-              <motion.p variants={itemVariants} className="text-gray-900/90 text-base leading-relaxed max-w-xl mb-8">{slide.sub}</motion.p>
+              <motion.p variants={itemVariants} className="text-gray-100/90 text-base leading-relaxed max-w-xl mb-8">{slide.sub}</motion.p>
 
               {/* Mini stats strip */}
               <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-8">
@@ -263,7 +263,7 @@ export default function HeroCarousel() {
                     <Icon className="text-white/50 text-sm shrink-0" />
                     <div>
                       <p className="text-white font-black text-sm leading-none">{value}</p>
-                      <p className="text-gray-900 text-[10px] mt-0.5">{label}</p>
+                      <p className="text-gray-300 text-[10px] mt-0.5">{label}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -278,12 +278,12 @@ export default function HeroCarousel() {
                   {slide.cta}
                   <FaArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
                 </Link>
-                <Link
-                  href="/contact"
+                <a
+                  href="mailto:info@buyresearchchems.com"
                   className="inline-flex items-center gap-2 bg-white/8 hover:bg-white/15 backdrop-blur-sm border border-white/15 text-white font-semibold px-7 py-3.5 rounded-2xl transition-all hover:-translate-y-1 text-sm"
                 >
                   Contact Us
-                </Link>
+                </a>
               </motion.div>
             </motion.div>
           </AnimatePresence>

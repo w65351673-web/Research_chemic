@@ -147,7 +147,7 @@ export default function PrivacyPolicyPage() {
           <p className="mb-5">Questions about this Privacy Policy? Contact us:</p>
           <div className="border border-gray-200 rounded-xl p-5 space-y-2 text-sm">
             <p><strong>Email:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">info@buyresearchchems.com</a></p>
-            <p><strong>Website:</strong> <Link href="/contact" className="text-sky-500 hover:underline">Contact Form</Link></p>
+            <p><strong>Website:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">Email Us</a></p>
             <p><strong>Response Time:</strong> We aim to respond within 48 hours</p>
           </div>
         </section>

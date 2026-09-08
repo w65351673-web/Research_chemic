@@ -305,7 +305,7 @@ export default function ShippingPolicyPage() {
           <div className="border border-gray-200 rounded-xl p-5 space-y-2 text-sm mb-6">
             <p><strong>Email:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">info@buyresearchchems.com</a></p>
             <p><strong>Response Time:</strong> Within 24 hours</p>
-            <p><strong>Contact Form:</strong> <Link href="/contact" className="text-sky-500 hover:underline">Click here</Link></p>
+            <p><strong>Contact:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">Email Us</a></p>
             <p className="text-gray-400 text-xs pt-2">Please include your order number and tracking information when contacting us about shipping issues.</p>
           </div>
         </section>

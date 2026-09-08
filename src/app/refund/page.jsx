@@ -274,7 +274,7 @@ export default function RefundPolicyPage() {
             <p><strong>Email:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">info@buyresearchchems.com</a></p>
             <p><strong>Subject Line:</strong> Return Request - Order #[Your Order Number]</p>
             <p><strong>Response Time:</strong> Within 24 hours</p>
-            <p><strong>Contact Form:</strong> <Link href="/contact" className="text-sky-500 hover:underline">Click here</Link></p>
+            <p><strong>Contact:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">Email Us</a></p>
           </div>
           <div className="bg-gray-50 border border-gray-100 rounded-xl p-5 text-sm">
             <p className="font-bold mb-2">Include in Your Email:</p>

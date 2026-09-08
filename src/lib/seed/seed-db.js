@@ -169,24 +169,6 @@ async function seedDatabase() {
         numReviews: 0,
         featured: true,
       },
-
-      // Etomidate
-      {
-        name: 'Etomidate Research Grade',
-        slug: 'etomidate-research-grade',
-        category: 'etomidate',
-        images: [],
-        description: 'Laboratory-grade etomidate compound for research and analytical purposes. 99%+ purity.',
-        priceVariants: [
-          { quantity: 1, price: 74.99 },
-          { quantity: 5, price: 329.99 },
-          { quantity: 10, price: 599.99 },
-        ],
-        countInStock: 15,
-        rating: 4.8,
-        numReviews: 0,
-        featured: true,
-      },
     ];
 
     // Insert products

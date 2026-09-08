@@ -29,10 +29,10 @@ export const metadata = {
     default: 'BuyResearchChems | Premium Research Chemicals',
     template: '%s | BuyResearchChems',
   },
-  description: 'Buy premium research chemicals online. BuyResearchChems supplies synthetic cannabinoids, opioids, nitazenes, etomidate and laboratory-grade compounds with worldwide discreet shipping.',
+  description: 'Buy premium research chemicals online. BuyResearchChems supplies synthetic cannabinoids, opioids, nitazenes and laboratory-grade compounds with worldwide discreet shipping.',
   keywords: [
     'research chemicals', 'buy research chemicals online',
-    'synthetic cannabinoids', 'opioids', 'nitazenes', 'etomidate', 'laboratory chemicals',
+    'synthetic cannabinoids', 'opioids', 'nitazenes', 'laboratory chemicals',
     '5cl-adba', '5cladba', '5fadb', 'jwh-018', 'adb-butinaca', 'ab-pinaca',
     '5F-EDMB-PINACA', 'ADB-FUBINACA', '4FADB', 'AMB-FUBINACA', 'MDMB-4en-PINACA',
     'BuyResearchChems',
@@ -55,7 +55,7 @@ export const metadata = {
     url: BASE_URL,
     siteName: 'BuyResearchChems',
     title: 'BuyResearchChems | Premium Research Chemicals',
-    description: 'Premium synthetic cannabinoids, opioids, nitazenes, etomidate and laboratory compounds. Worldwide discreet shipping.',
+    description: 'Premium synthetic cannabinoids, opioids, nitazenes and laboratory compounds. Worldwide discreet shipping.',
     images: [
       {
         url: `${BASE_URL}/images/logo.png`,
@@ -68,7 +68,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'BuyResearchChems | Premium Research Chemicals',
-    description: 'Premium synthetic cannabinoids, opioids, nitazenes, etomidate and laboratory compounds. Worldwide discreet shipping.',
+    description: 'Premium synthetic cannabinoids, opioids, nitazenes and laboratory compounds. Worldwide discreet shipping.',
     images: [`${BASE_URL}/images/logo.png`],
   },
   icons: {

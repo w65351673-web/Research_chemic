@@ -1,7 +1,7 @@
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://buyresearchchems.com'),
   title: 'About BuyResearchChems | Premium Research Chemicals Supplier',
-  description: 'BuyResearchChems is a trusted supplier of high-purity research chemicals including 5cl-adba, jwh-018, adb-butinaca, opioids, nitazenes, etomidate and more. Lab-verified compounds with certificates of analysis.',
+  description: 'BuyResearchChems is a trusted supplier of high-purity research chemicals including 5cl-adba, jwh-018, adb-butinaca, opioids and nitazenes. Lab-verified compounds with certificates of analysis.',
   alternates: {
     canonical: '/about',
   },
