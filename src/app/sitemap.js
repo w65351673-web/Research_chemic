@@ -2,7 +2,7 @@ import dbConnect from '@/lib/utils/db';
 import Product from '@/models/Product';
 
 export default async function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://buyresearchchems.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://researchchems.online';
 
   // ── Static pages (only URLs that actually exist in the app) ──
   const staticPages = [
