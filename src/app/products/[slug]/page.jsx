@@ -173,9 +173,6 @@ export default function ProductDetailPage() {
                   <FaStar key={i} className={`w-4 h-4 ${i < Math.round(product.rating) ? 'text-yellow-400' : 'text-gray-700'}`} />
                 ))}
               </div>
-              <span className="text-gray-900 text-sm">
-                {product.numReviews} {product.numReviews === 1 ? 'review' : 'reviews'}
-              </span>
             </div>
 
             {/* Gram selector â€” fixed pricing tiers */}
@@ -197,7 +194,7 @@ export default function ProductDetailPage() {
                 ))}
               </div>
               <div className="text-2xl font-extrabold text-gray-900">
-                â‚¬{Number(selectedTier.price).toFixed(2)}
+                &euro;{Number(selectedTier.price).toFixed(2)}
                 <span className="ml-2 text-sm text-gray-900 font-normal">for {selectedGrams}g</span>
               </div>
             </div>
@@ -235,61 +232,19 @@ export default function ProductDetailPage() {
               </button>
             </div>
 
-            {/* Description */}
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5">
-              <h3 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wider">Description</h3>
-              <div className="text-gray-900 text-sm space-y-2 leading-relaxed">
-                {product.description.split('\n').map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Reviews */}
+        {/* Description */}
         <div className="mt-16">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Customer Reviews</h2>
-
-          {product.reviews && product.reviews.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-              {product.reviews.map((review, idx) => (
-                <div key={review._id || idx} className="bg-white border border-gray-200 rounded-xl p-5">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 bg-sky-50 border border-sky-200 rounded-full flex items-center justify-center text-sky-500 font-bold text-sm">
-                        {review.name.charAt(0)}
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900 text-sm">{review.name}</p>
-                        <p className="text-gray-400 text-xs">
-                          {new Date(review.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className={`w-3.5 h-3.5 ${i < review.rating ? 'text-amber-400' : 'text-gray-200'}`} />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-gray-900 text-sm leading-relaxed">{review.comment}</p>
-                </div>
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Description</h2>
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+            <div className="text-gray-900 text-base leading-loose space-y-4">
+              {product.description.split('\n').map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
               ))}
             </div>
-          ) : (
-            <p className="text-gray-400 text-sm mb-8">No reviews yet. Be the first to share your experience.</p>
-          )}
-
-          {/* Write a Review */}
-          <ReviewForm slug={product.slug} onReviewAdded={(review) => {
-            setProduct(prev => ({
-              ...prev,
-              reviews: [...(prev.reviews || []), review],
-              numReviews: (prev.numReviews || 0) + 1,
-              rating: ([...(prev.reviews || []), review].reduce((a, r) => a + r.rating, 0)) / ([...(prev.reviews || []), review].length),
-            }));
-          }} />
+          </div>
         </div>
       </div>
     </div>

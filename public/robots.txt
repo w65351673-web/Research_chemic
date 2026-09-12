@@ -22,4 +22,4 @@ Disallow: /auth/
 Disallow: /auth/*
 Disallow: /login
 
-Sitemap: https://synthapuresite.com/sitemap.xml
+Sitemap: https://buyresearchchems.com/sitemap.xml

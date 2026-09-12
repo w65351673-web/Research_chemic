@@ -198,8 +198,8 @@ export async function POST(request) {
     */
     
     // Calculate other prices
-    const shippingPrice = itemsPrice > 100 ? 0 : 15; // Free shipping over $100
-    const taxPrice = itemsPrice * 0.07; // 7% tax
+    const shippingPrice = 40; // Flat shipping fee
+    const taxPrice = 0; // No tax
     const totalPrice = itemsPrice + shippingPrice + taxPrice;
     
     console.log('Creating order with billing details:', body.billingDetails);

@@ -79,7 +79,7 @@ function CheckoutSuccessContent() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-900 mb-0.5">Total</p>
-                  <p className="text-gray-900 font-semibold text-sm">â‚¬{order.totalPrice.toFixed(2)}</p>
+                  <p className="text-gray-900 font-semibold text-sm">&euro;{order.totalPrice.toFixed(2)}</p>
                 </div>
                 <div>
                   <p className="text-xs text-gray-900 mb-0.5">Status</p>

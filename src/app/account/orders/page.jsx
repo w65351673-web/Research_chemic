@@ -121,7 +121,7 @@ export default function OrdersPage() {
                     </div>
                     <div>
                       <p className="text-xs text-gray-900 mb-0.5">Total</p>
-                      <p className="text-white text-sm font-semibold">â‚¬{order.totalPrice.toFixed(2)}</p>
+                      <p className="text-white text-sm font-semibold">&euro;{order.totalPrice.toFixed(2)}</p>
                     </div>
                     <div>
                       <p className="text-xs text-gray-900 mb-0.5">Status</p>
@@ -150,7 +150,7 @@ export default function OrdersPage() {
                             <p className="text-gray-900 text-xs">Qty: {item.quantity}</p>
                           </div>
                         </div>
-                        <p className="text-white text-sm">â‚¬{(item.price * item.quantity).toFixed(2)}</p>
+                        <p className="text-white text-sm">&euro;{(item.price * item.quantity).toFixed(2)}</p>
                       </div>
                     ))}
                   </div>

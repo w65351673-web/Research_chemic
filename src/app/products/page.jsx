@@ -13,25 +13,29 @@ export async function generateMetadata({ searchParams }) {
   // Always use /products as canonical to avoid duplicate content from query params
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://buyresearchchems.com';
   
+  const categoryKeywords = category
+    ? `${category.toLowerCase()}, ${category.toLowerCase()} for sale, buy ${category.toLowerCase()}`
+    : 'research chemicals, research chemicals for sale, buy research chemicals online, synthetic cannabinoids, buy synthetic cannabinoids, opioids, nitazenes';
+
   return {
     metadataBase: new URL(baseUrl),
-    title: category 
-      ? `${category} | Research Chemicals | BuyResearchChems`
-      : 'Research Chemicals | 5cl-adba, jwh-018, adb-butinaca | BuyResearchChems',
+    title: category
+      ? `Buy ${category} Online | Research Chemicals | BuyResearchChems`
+      : 'Research Chemicals for Sale | 5cl-adba, 5fadb, JWH-018 | BuyResearchChems',
     description: category
-      ? `Browse premium ${category.toLowerCase()}: 5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca and more.`
-      : 'Browse premium research chemicals: 5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca, ab-pinaca, 5F-EDMB-PINACA, ADB-FUBINACA, 4FADB, AMB-FUBINACA, MDMB-4en-PINACA. High-quality synthetic cannabinoids, opioids and nitazenes for laboratory research.',
-    keywords: '5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca, ab-pinaca, 5F-EDMB-PINACA, ADB-FUBINACA, 4FADB, AMB-FUBINACA, MDMB-4en-PINACA, buy research chemicals, synthetic cannabinoids, opioids, nitazenes',
+      ? `Buy premium ${category.toLowerCase()} online at BuyResearchChems. High-purity 5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca and more — lab-verified with discreet worldwide shipping.`
+      : 'Buy premium research chemicals online. Browse 5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca, ab-pinaca, 5F-EDMB-PINACA, ADB-FUBINACA, 4FADB, AMB-FUBINACA, MDMB-4en-PINACA and other lab-grade synthetic cannabinoids, opioids and nitazenes.',
+    keywords: `${categoryKeywords}, 5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca, ab-pinaca, 5F-EDMB-PINACA, ADB-FUBINACA, 4FADB, AMB-FUBINACA, MDMB-4en-PINACA, 6cl-adba, isotonitazene, ketamine, alpha-pvp, laboratory chemicals, high purity, BuyResearchChems`,
     alternates: {
       canonical: '/products', // Always point to /products to avoid duplicate content from query params
     },
     openGraph: {
-      title: category 
-        ? `${category} | Research Chemicals | BuyResearchChems`
-        : 'Research Chemicals | 5cl-adba, jwh-018, adb-butinaca | BuyResearchChems',
+      title: category
+        ? `Buy ${category} Online | Research Chemicals | BuyResearchChems`
+        : 'Research Chemicals for Sale | 5cl-adba, 5fadb, JWH-018 | BuyResearchChems',
       description: category
-        ? `Browse premium ${category.toLowerCase()}: 5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca and more.`
-        : 'Browse premium research chemicals: 5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca and more.',
+        ? `Browse premium ${category.toLowerCase()} at BuyResearchChems. Lab-verified compounds with discreet worldwide shipping.`
+        : 'Browse premium research chemicals: 5cl-adba, 5cladba, 5fadb, jwh-018, adb-butinaca and more. Lab-verified with discreet worldwide shipping.',
       url: '/products',
       type: 'website',
     },

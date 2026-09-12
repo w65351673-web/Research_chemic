@@ -14,7 +14,7 @@ function LoginRedirectContent() {
     });
     
     // Redirect to the actual login page with all query parameters
-    router.replace(`/auth/login?${params.toString()}`);
+    router.replace('/');
   }, [router, searchParams]);
   
   return (

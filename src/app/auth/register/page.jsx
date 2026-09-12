@@ -18,10 +18,8 @@ export default function RegisterPage() {
 
   // Redirect if already logged in
   useEffect(() => {
-    if (isAuthenticated) {
-      router.push('/');
-    }
-  }, [isAuthenticated, router]);
+    router.replace('/');
+  }, [router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

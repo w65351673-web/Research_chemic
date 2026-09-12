@@ -93,7 +93,7 @@ export const getOrganizationSchema = () => ({
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
-    email: 'info@buyresearchchems.com',
+    email: 'order@researchchems.online',
     availableLanguage: 'English',
   },
   sameAs: [],

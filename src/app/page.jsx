@@ -10,18 +10,23 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://buyresearchchems.c
 
 export const metadata = {
   metadataBase: new URL(BASE_URL),
-  title: 'BuyResearchChems | Buy Research Chemicals Online — Premium Quality',
-  description: 'Buy premium research chemicals online. BuyResearchChems supplies synthetic cannabinoids (5cl-adba, jwh-018, adb-butinaca), opioids, nitazenes and laboratory-grade compounds. Fast discreet shipping worldwide.',
+  title: 'Buy Research Chemicals Online | 5cl-adba, 5fadb, JWH-018 | BuyResearchChems',
+  description: 'Buy premium research chemicals online at BuyResearchChems. High-purity synthetic cannabinoids (5cl-adba, 5fadb, jwh-018, adb-butinaca), opioids, nitazenes and lab-grade compounds with discreet worldwide shipping.',
   keywords: [
     'buy research chemicals online',
-    'research chemicals',
+    'research chemicals for sale',
     'synthetic cannabinoids',
-    '5cl-adba', '5cladba', '5fadb', 'jwh-018',
-    'adb-butinaca', 'ab-pinaca', '5F-EDMB-PINACA',
-    'ADB-FUBINACA', '4FADB', 'AMB-FUBINACA', 'MDMB-4en-PINACA',
-    'opioids', 'nitazenes',
-    'laboratory chemicals',
-    'premium research chemicals', 'BuyResearchChems',
+    'buy synthetic cannabinoids',
+    '5cl-adba', '5cladba', '5-cl-adba', '5fadb', '5-fadb',
+    'jwh-018', 'adb-butinaca', 'ab-pinaca',
+    '5F-EDMB-PINACA', 'ADB-FUBINACA', '4FADB', 'AMB-FUBINACA', 'MDMB-4en-PINACA',
+    '6cl-adba', '6-cl-adba',
+    'opioids', 'nitazenes', 'benzos',
+    'isotonitazene', 'metonitazene', 'protonitazene', 'butonitazene',
+    'fentanyl', 'morphine sulfate', 'oxycodone', 'hydrocodone', 'codeine phosphate',
+    'ketamine', 'alpha-pvp', 'alpha-pihp', '3-cmc', '4-cmc', '3-mmc', '4-mmc',
+    'laboratory chemicals', 'premium research chemicals', 'lab verified chemicals',
+    'BuyResearchChems',
   ],
   alternates: {
     canonical: BASE_URL,
@@ -31,7 +36,7 @@ export const metadata = {
     locale: 'en_US',
     url: BASE_URL,
     siteName: 'BuyResearchChems',
-    title: 'BuyResearchChems | Buy Research Chemicals Online — Premium Quality',
+    title: 'Buy Research Chemicals Online | 5cl-adba, 5fadb, JWH-018 | BuyResearchChems',
     description: 'Premium synthetic cannabinoids, opioids, nitazenes and laboratory compounds. Worldwide discreet shipping. Shop BuyResearchChems today.',
     images: [
       {
@@ -44,7 +49,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BuyResearchChems | Buy Research Chemicals Online',
+    title: 'Buy Research Chemicals Online | BuyResearchChems',
     description: 'Premium synthetic cannabinoids, opioids, nitazenes and laboratory compounds. Worldwide discreet shipping.',
     images: [`${BASE_URL}/images/logo.png`],
   },

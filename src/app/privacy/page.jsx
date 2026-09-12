@@ -3,7 +3,11 @@ import Link from 'next/link';
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://buyresearchchems.com'),
   title: 'Privacy Policy | BuyResearchChems',
-  description: 'Privacy Policy for BuyResearchChems â€" Learn how we collect, use, and protect your personal information when purchasing research chemicals.',
+  description: 'Read the BuyResearchChems Privacy Policy. Learn how we collect, use and protect your personal information when buying research chemicals online.',
+  keywords: [
+    'privacy policy', 'BuyResearchChems privacy', 'research chemicals privacy',
+    'personal information', 'data protection',
+  ],
   alternates: { canonical: '/privacy' },
 };
 
@@ -110,7 +114,7 @@ export default function PrivacyPolicyPage() {
           <ul className="space-y-2 ml-1 mb-4">
             {['Right to know what personal information is collected','Right to know if personal information is sold or disclosed','Right to opt-out of sale of personal information','Right to non-discrimination for exercising your rights'].map(i=><li key={i} className="flex gap-3"><Dot /><span>{i}</span></li>)}
           </ul>
-          <p>To exercise your rights, contact us at <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">info@buyresearchchems.com</a></p>
+          <p>To exercise your rights, contact us at <a href="mailto:order@researchchems.online" className="text-sky-500 hover:underline">order@researchchems.online</a></p>
         </section>
 
         <section>
@@ -146,8 +150,8 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-2xl font-black tracking-tight mb-4">13. Contact Us</h2>
           <p className="mb-5">Questions about this Privacy Policy? Contact us:</p>
           <div className="border border-gray-200 rounded-xl p-5 space-y-2 text-sm">
-            <p><strong>Email:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">info@buyresearchchems.com</a></p>
-            <p><strong>Website:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">Email Us</a></p>
+            <p><strong>Email:</strong> <a href="mailto:order@researchchems.online" className="text-sky-500 hover:underline">order@researchchems.online</a></p>
+            <p><strong>Website:</strong> <a href="mailto:order@researchchems.online" className="text-sky-500 hover:underline">Email Us</a></p>
             <p><strong>Response Time:</strong> We aim to respond within 48 hours</p>
           </div>
         </section>

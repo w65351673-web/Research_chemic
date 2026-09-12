@@ -253,9 +253,7 @@ export default function Navbar() {
                     </AnimatePresence>
                   </div>
                 ) : (
-                  <Link href="/auth/login" className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-sm font-bold shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/30 transition-all">
-                    <FaUser size={11} /> Login
-                  </Link>
+                  null
                 )
               )}
 
@@ -447,9 +445,7 @@ export default function Navbar() {
                       </button>
                     </>
                   ) : (
-                    <Link href="/auth/login" className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-sm font-bold transition-all">
-                      <FaUser size={12} /> Login / Register
-                    </Link>
+                    null
                   )
                 )}
               </div>

@@ -2,7 +2,7 @@
 
 import { FaEnvelope } from 'react-icons/fa';
 
-export default function EmailMailbox({ email = 'info@buyresearchchems.com', className = '' }) {
+export default function EmailMailbox({ email = 'order@researchchems.online', className = '' }) {
   return (
     <a
       href={`https://mail.google.com/mail/?view=cm&to=${email}&su=Inquiry%20from%20BuyResearchChems`}

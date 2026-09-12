@@ -225,6 +225,48 @@ Our α-PVP is produced to 99%+ purity, confirmed by HPLC-MS, NMR spectroscopy, a
     numReviews: 24,
     featured: true,
   },
+  {
+    name: 'Amphetamine Powder',
+    slug: 'amphetamine-powder',
+    category: 'research chemicals',
+    images: [],
+    description: `Amphetamine is a potent central nervous system stimulant of the phenethylamine class. First synthesised in 1887 by Lazăr Edeleanu, it is one of the most thoroughly studied psychostimulants in pharmacology and neuroscience. Amphetamine acts primarily by increasing the release of dopamine, norepinephrine, and serotonin from presynaptic neurons, while also inhibiting their reuptake and reversing transporter function.
+
+Our amphetamine powder is produced to 99%+ purity, verified by HPLC-MS, NMR spectroscopy, and elemental analysis. It is supplied as the freebase or sulfate salt (as specified) and is intended for research, analytical chemistry, and neuropharmacology studies. A full Certificate of Analysis is provided with every order.`,
+    priceVariants: [
+      { quantity: 25, price: 280 },
+      { quantity: 50, price: 390 },
+      { quantity: 100, price: 520 },
+      { quantity: 500, price: 900 },
+      { quantity: 1000, price: 1550 },
+    ],
+    countInStock: 40,
+    rating: 4.7,
+    numReviews: 25,
+    featured: false,
+  },
+  {
+    name: '2-FDCK (2-Fluorodeschloroketamine)',
+    slug: '2-fdck',
+    category: 'research chemicals',
+    images: [],
+    description: `2-FDCK, or 2-Fluorodeschloroketamine, is an arylcyclohexylamine dissociative compound closely related to ketamine. It is distinguished by a fluorine atom at the 2-position of the phenyl ring in place of the chlorine atom found in ketamine, making it a valuable research analogue for SAR studies of NMDA receptor pharmacology and dissociative anaesthetics.
+
+2-FDCK acts primarily as a non-competitive NMDA receptor antagonist, similar to ketamine, producing dissociative, analgesic, and anaesthetic-like effects in preclinical models. It is widely used in neuropharmacology, glutamate receptor research, and as an analytical reference standard.
+
+Our 2-FDCK is produced to 99%+ purity, confirmed by HPLC-MS, NMR spectroscopy, and X-ray powder diffraction. A complete Certificate of Analysis is provided with every order.`,
+    priceVariants: [
+      { quantity: 25, price: 320 },
+      { quantity: 50, price: 450 },
+      { quantity: 100, price: 600 },
+      { quantity: 500, price: 1050 },
+      { quantity: 1000, price: 1800 },
+    ],
+    countInStock: 35,
+    rating: 4.8,
+    numReviews: 19,
+    featured: false,
+  },
 ];
 
 async function run() {

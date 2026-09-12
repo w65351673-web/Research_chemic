@@ -149,6 +149,214 @@ Our ADB-BUTINACA is produced to 99%+ purity, confirmed by HPLC-MS, NMR spectrosc
     numReviews: 26,
     featured: true,
   },
+  {
+    name: '4F-ADB Precursor/Kit',
+    slug: '4f-adb-precursor-kit',
+    category: 'cannabinoids',
+    images: [],
+    description: `4F-ADB is a synthetic cannabinoid precursor supplied as a complete research kit for analytical and forensic reference work. The kit includes high-purity reference material with supporting documentation for method development, calibration, and cannabinoid receptor studies.
+
+Manufactured to 99%+ purity and verified by HPLC-MS and NMR spectroscopy. A full Certificate of Analysis is included with every order.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 78,
+    rating: 4.7,
+    numReviews: 18,
+    featured: false,
+  },
+  {
+    name: '5F-MDMB-2201',
+    slug: '5f-mdmb-2201',
+    category: 'cannabinoids',
+    images: [],
+    description: `5F-MDMB-2201 is an indazole-3-carboxamide synthetic cannabinoid featuring a 5-fluoropentyl chain and an MDMB pharmacophore. It is widely used as a reference standard in forensic toxicology, analytical method development, and cannabinoid receptor binding studies.
+
+This compound is produced to 99%+ purity and supplied with a complete Certificate of Analysis including HPLC-MS and NMR data.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 23,
+    rating: 4.8,
+    numReviews: 22,
+    featured: false,
+  },
+  {
+    name: 'MDMB-FUBINACA',
+    slug: 'mdmb-fubinaca',
+    category: 'cannabinoids',
+    images: [],
+    description: `MDMB-FUBINACA is a potent synthetic cannabinoid of the indazole-3-carboxamide class, distinguished by an MDMB tert-leucinate group and a fluorobenzyl substitution. It has been extensively characterized in receptor pharmacology, metabolism, and forensic chemistry research.
+
+Supplied as 99%+ purity reference material with full HPLC-MS and NMR documentation.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 500,
+    rating: 4.6,
+    numReviews: 31,
+    featured: true,
+  },
+  {
+    name: 'MDMB-CHMINACA',
+    slug: 'mdmb-chminaca',
+    category: 'cannabinoids',
+    images: [],
+    description: `MDMB-CHMINACA is a synthetic cannabinoid featuring an MDMB tert-leucinate pharmacophore and a cyclohexylmethyl substituent. It serves as a valuable reference compound for cannabinoid receptor binding assays, metabolite identification, and comparative SAR studies.
+
+Our material is manufactured to 99%+ purity and verified by HPLC-MS and NMR. A Certificate of Analysis is provided with every order.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 300,
+    rating: 4.5,
+    numReviews: 27,
+    featured: false,
+  },
+  {
+    name: 'AB-FUBINACA',
+    slug: 'ab-fubinaca',
+    category: 'cannabinoids',
+    images: [],
+    description: `AB-FUBINACA is a synthetic cannabinoid of the indazole-3-carboxamide class, widely referenced in forensic and analytical chemistry literature. It features an aminobutyl amide and a fluorobenzyl group, making it a key standard for cannabinoid analytical methods.
+
+Produced to 99%+ purity and supplied with a Certificate of Analysis including HPLC-MS and NMR spectral data.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 200,
+    rating: 4.7,
+    numReviews: 19,
+    featured: false,
+  },
+  {
+    name: 'MDMB-4en-PINACA',
+    slug: 'mdmb-4en-pinaca',
+    category: 'cannabinoids',
+    images: [],
+    description: `MDMB-4en-PINACA is a synthetic cannabinoid featuring a pentenyl chain at the N1 position and an MDMB tert-leucinate pharmacophore. It is used as a reference standard in cannabinoid receptor pharmacology, metabolism studies, and forensic toxicology.
+
+Supplied at 99%+ purity with complete HPLC-MS and NMR documentation.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 300,
+    rating: 4.8,
+    numReviews: 24,
+    featured: false,
+  },
+  {
+    name: 'AMB-FUBINACA',
+    slug: 'amb-fubinaca',
+    category: 'cannabinoids',
+    images: [],
+    description: `AMB-FUBINACA is a synthetic cannabinoid characterized by an adamantyl methyl ester group and a fluorobenzyl indazole scaffold. It is a valuable reference material for cannabinoid receptor binding studies and forensic analytical method development.
+
+Manufactured to 99%+ purity and supplied with a Certificate of Analysis including HPLC-MS and NMR data.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 300,
+    rating: 4.6,
+    numReviews: 20,
+    featured: false,
+  },
+  {
+    name: 'ADB-FUBINACA',
+    slug: 'adb-fubinaca',
+    category: 'cannabinoids',
+    images: [],
+    description: `ADB-FUBINACA is a potent synthetic cannabinoid of the indazole-3-carboxamide class, distinguished by an ADB tert-leucinamide group and a fluorobenzyl substituent. It is commonly used as a reference standard in cannabinoid analytical chemistry and receptor pharmacology research.
+
+Produced to 99%+ purity and supplied with full HPLC-MS and NMR documentation.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 34,
+    rating: 4.9,
+    numReviews: 35,
+    featured: true,
+  },
+  {
+    name: '5F-EDMB-PINACA',
+    slug: '5f-edmb-pinaca',
+    category: 'cannabinoids',
+    images: [],
+    description: `5F-EDMB-PINACA is a synthetic cannabinoid featuring a 5-fluoropentyl chain and an EDMB pharmacophore on an indazole-3-carboxamide core. It is used as a reference standard in forensic toxicology and cannabinoid receptor research.
+
+Our reference material is 99%+ pure and accompanied by HPLC-MS and NMR spectral data.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 100,
+    rating: 4.5,
+    numReviews: 15,
+    featured: false,
+  },
+  {
+    name: '5-FADB Precursor/Kit',
+    slug: '5-fadb-precursor-kit',
+    category: 'cannabinoids',
+    images: [],
+    description: `5-FADB Precursor/Kit provides high-purity 5-FADB reference material together with documentation for analytical research and method development. The kit format is ideal for laboratories calibrating instrumentation or building forensic reference libraries.
+
+Manufactured to 99%+ purity and verified by HPLC-MS and NMR. A Certificate of Analysis is included.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 100,
+    rating: 4.7,
+    numReviews: 21,
+    featured: false,
+  },
+  {
+    name: '6-CL-ADBA Precursor/Kit',
+    slug: '6-cl-adba-precursor-kit',
+    category: 'cannabinoids',
+    images: [],
+    description: `6-CL-ADBA Precursor/Kit contains high-purity 6-chloro-ADBA reference material for cannabinoid receptor and forensic analytical research. The kit is formatted for convenient calibration, method validation, and comparative SAR studies.
+
+Supplied at 99%+ purity with HPLC-MS and NMR documentation and a Certificate of Analysis.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 100,
+    rating: 4.6,
+    numReviews: 17,
+    featured: false,
+  },
+  {
+    name: '5-CL-ADBA Precursor/Kit',
+    slug: '5-cl-adba-precursor-kit',
+    category: 'cannabinoids',
+    images: [],
+    description: `5-CL-ADBA Precursor/Kit supplies high-purity 5-chloro-ADBA reference material in a convenient kit for analytical chemistry and forensic toxicology laboratories. Ideal for calibration, method development, and cannabinoid reference libraries.
+
+Manufactured to 99%+ purity and supplied with a Certificate of Analysis including HPLC-MS and NMR data.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 100,
+    rating: 4.8,
+    numReviews: 29,
+    featured: false,
+  },
+  {
+    name: 'JWH-018',
+    slug: 'jwh-018',
+    category: 'cannabinoids',
+    images: [],
+    description: `JWH-018 is a classic naphthoylindole synthetic cannabinoid and a foundational reference compound for CB1 and CB2 receptor pharmacology. First synthesized in the JWH research series, it remains a standard in cannabinoid analytical chemistry and receptor binding studies.
+
+Our JWH-018 is produced to 99%+ purity and supplied with full HPLC-MS, NMR, and elemental analysis documentation.`,
+    priceVariants: [
+      { quantity: 1, price: 300 },
+    ],
+    countInStock: 50,
+    rating: 4.9,
+    numReviews: 47,
+    featured: true,
+  },
 ];
 
 async function run() {

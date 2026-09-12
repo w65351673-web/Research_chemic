@@ -8,6 +8,7 @@ import { FaFlask, FaShoppingCart, FaStar, FaTruck, FaCheckCircle, FaQuoteLeft, F
 import { HiOutlineArrowRight as HiArrowRight } from 'react-icons/hi';
 import { useCart } from '@/components/cart/CartProvider';
 import SEOKeywords from '@/components/seo/SEOKeywords';
+import HomeSEOContent from '@/components/seo/HomeSEOContent';
 import HeroCarousel from '@/components/home/HeroCarousel';
 
 export default function HomeClient({ featuredProducts = [] }) {
@@ -20,6 +21,7 @@ export default function HomeClient({ featuredProducts = [] }) {
       <HowItWorksSection />
       <QualityBanner />
       <TestimonialsSection />
+      <HomeSEOContent />
       <CTABanner />
     </div>
   );
@@ -63,6 +65,12 @@ function HeroDivider() {
 
 /* -- Featured Products -- */
 function ProductCard({ product, addedId, onAddToCart }) {
+  const displayPrice = product.price && product.price > 0
+    ? product.price
+    : product.priceVariants && product.priceVariants.length > 0
+      ? product.priceVariants.reduce((min, v) => v.price < min ? v.price : min, product.priceVariants[0]?.price || 0)
+      : 0;
+
   return (
     <div className="relative group bg-white border border-gray-200 rounded-3xl overflow-hidden hover:border-sky-300 transition-all duration-300 hover:shadow-xl hover:shadow-sky-100 flex flex-col h-full">
       {product.countInStock <= 0 && <div className="absolute top-3 left-3 z-10 bg-gray-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">Sold Out</div>}
@@ -83,7 +91,7 @@ function ProductCard({ product, addedId, onAddToCart }) {
         <p className="text-gray-900 text-xs leading-relaxed line-clamp-2 mb-3 flex-1">{product.description}</p>
         <div className="flex items-center justify-between pt-3 border-t border-gray-100">
           <div>
-            <p className="text-xl font-black text-gray-900 leading-none">&#8364;{typeof product.price === 'number' ? product.price.toFixed(2) : '0.00'}</p>
+            <p className="text-xl font-black text-gray-900 leading-none">{displayPrice.toFixed(2)}</p>
             <p className={`text-[10px] mt-0.5 font-semibold ${product.countInStock > 0 ? 'text-emerald-500' : 'text-red-500'}`}>{product.countInStock > 0 ? 'In stock' : 'Out of stock'}</p>
           </div>
           {product.countInStock > 0 ? (
@@ -301,7 +309,7 @@ function CTABanner() {
             <Link href="/products" className="group inline-flex items-center gap-2.5 bg-white text-sky-700 font-black px-10 py-4 rounded-2xl transition-all hover:bg-sky-50 hover:-translate-y-1 shadow-2xl text-sm">
               Shop Now <HiArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <a href="mailto:info@buyresearchchems.com" className="inline-flex items-center gap-2 border border-white/30 text-white hover:text-white hover:border-white/60 font-bold px-10 py-4 rounded-2xl transition-all hover:-translate-y-1 text-sm">Contact Us</a>
+            <a href="mailto:order@researchchems.online" className="inline-flex items-center gap-2 border border-white/30 text-white hover:text-white hover:border-white/60 font-bold px-10 py-4 rounded-2xl transition-all hover:-translate-y-1 text-sm">Contact Us</a>
           </div>
         </FadeUp>
       </div>

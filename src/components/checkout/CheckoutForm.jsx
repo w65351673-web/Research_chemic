@@ -128,7 +128,7 @@ export default function CheckoutForm({ orderDetails }) {
         ) : (
           <>
             <FaLock className="mr-2 text-xs" />
-            Place Order â€” â‚¬{orderDetails.total.toFixed(2)}
+            Place Order &mdash; &euro;{orderDetails.total.toFixed(2)}
           </>
         )}
       </button>

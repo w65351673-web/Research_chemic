@@ -279,7 +279,7 @@ export default function HeroCarousel() {
                   <FaArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
-                  href="mailto:info@buyresearchchems.com"
+                  href="mailto:order@researchchems.online"
                   className="inline-flex items-center gap-2 bg-white/8 hover:bg-white/15 backdrop-blur-sm border border-white/15 text-white font-semibold px-7 py-3.5 rounded-2xl transition-all hover:-translate-y-1 text-sm"
                 >
                   Contact Us

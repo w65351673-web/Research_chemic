@@ -182,23 +182,44 @@ Our bromazolam is produced to 99%+ purity, confirmed by HPLC, NMR spectroscopy, 
 Bromazolam is used in GABA-A receptor pharmacology research, benzodiazepine binding studies, comparative potency assessments within the triazolobenzodiazepine series, and forensic analytical reference standard development.`,
 };
 
+function generateDescription(product) {
+  const { name, category } = product;
+  const cat = category ? category.toLowerCase() : 'research chemicals';
+  return `${name} is a high-purity reference material supplied exclusively for advanced scientific, forensic, and analytical research applications. This compound is carefully prepared, handled, and tested to meet the exacting standards required by research laboratories, universities, and analytical testing facilities working in the ${cat} field. Every batch is subject to comprehensive quality-control procedures to ensure consistency, identity, and purity suitable for demanding research protocols.
+
+The chemical and pharmacological profile of ${name} has been documented in the scientific literature as a valuable reference compound for receptor binding studies, analytical method development, and comparative structure-activity relationship (SAR) investigations. Its physicochemical properties — including solubility, stability, chromatographic retention, and spectral behaviour — have been characterised to support reproducible and reliable experimental outcomes. These properties make it suitable for in vitro assays, reference standard development, and the calibration of analytical instrumentation.
+
+${name} is manufactured to a minimum purity of 99%+, a standard that is confirmed by high-performance liquid chromatography (HPLC), nuclear magnetic resonance (NMR) spectroscopy, and mass spectrometry where appropriate. Each batch is accompanied by a complete Certificate of Analysis (CoA) that reports identity confirmation, purity assessment, appearance, solubility, and representative spectral data. This documentation is essential for laboratories that require traceable and verifiable reference materials.
+
+Researchers utilise ${name} in a broad range of contexts, including receptor pharmacology, metabolic and pharmacokinetic studies, forensic toxicology, environmental analysis, and the development and validation of detection methods. As a reference material, it is intended strictly for in vitro and laboratory research use and is not intended for human or veterinary administration, consumption, or any clinical application. All handling should be performed by qualified personnel under appropriate laboratory conditions.
+
+Proper storage and handling of ${name} are critical to preserving its chemical integrity over time. The material should be stored in a cool, dry, and light-protected environment, away from incompatible substances and sources of contamination. For complete handling, safety, storage, and disposal information, consult the Certificate of Analysis and the relevant safety data sheet (SDS) supplied with the order.
+
+Our quality programme for reference materials includes rigorous supplier qualification, batch-level testing, and documentation review to ensure that ${name} consistently meets the specifications required for research use. We work with experienced analytical chemists and quality-control professionals to verify identity and purity using validated methods. This commitment to transparency and reproducibility is central to supporting the scientific community.
+
+Customer support for research clients is available to assist with questions regarding the analytical data, handling recommendations, or order specifications for ${name}. Whether your research requires a single reference standard or bulk quantities for an extended programme, we are prepared to supply materials that align with your laboratory's requirements. Please contact our team for additional documentation or to discuss custom quantity and pricing options.
+
+All purchases of ${name} are governed by terms that require the buyer to confirm that the material will be used only for lawful research purposes in accordance with applicable local, national, and institutional regulations. The buyer is responsible for ensuring that receipt, storage, and use of this reference material comply with all relevant laws and safety guidelines. By ordering, the research client agrees to use ${name} solely for legitimate scientific and analytical research.`;
+}
+
 async function run() {
   await mongoose.connect(MONGODB_URI);
   console.log('Connected to MongoDB\n');
 
-  let updated = 0, notFound = 0;
-  for (const [slug, description] of Object.entries(descriptions)) {
-    const result = await Product.updateOne({ slug }, { $set: { description } });
-    if (result.matchedCount === 0) {
-      console.log(`NOT FOUND: ${slug}`);
-      notFound++;
-    } else {
-      console.log(`UPDATED: ${slug}`);
+  const products = await Product.find({}).select('name slug category').lean();
+  let updated = 0;
+  for (const p of products) {
+    const description = descriptions[p.slug] || generateDescription(p);
+    const result = await Product.updateOne({ slug: p.slug }, { $set: { description } });
+    if (result.matchedCount > 0) {
+      console.log(`UPDATED: ${p.slug} (${p.description ? 'existing' : 'new'})`);
       updated++;
+    } else {
+      console.log(`NOT FOUND: ${p.slug}`);
     }
   }
 
-  console.log(`\nDone — ${updated} updated, ${notFound} not found.`);
+  console.log(`\nDone — ${updated} products updated.`);
   await mongoose.disconnect();
   process.exit(0);
 }

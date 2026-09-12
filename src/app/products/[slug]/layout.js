@@ -18,26 +18,31 @@ export async function generateMetadata({ params }) {
     }
 
     const startingPrice = product.priceVariants?.[0]?.price;
-    const priceText = startingPrice ? ` Starting from €${startingPrice}.` : '';
+    const priceText = startingPrice ? ` Starting from \u20AC${startingPrice}.` : '';
     const shortDesc = product.description
       ? product.description.slice(0, 155).replace(/\n/g, ' ').trim() + '…'
       : `Buy ${product.name} — high-purity ${product.category} research compound.${priceText}`;
 
     const image = product.images?.[0] || `${BASE_URL}/images/logo.png`;
+    const categoryKeywords = [product.category, product.category + ' for sale', 'buy ' + product.category].filter(Boolean);
 
     return {
       metadataBase: new URL(BASE_URL),
-      title: `${product.name} | BuyResearchChems`,
+      title: `Buy ${product.name} Online | Research Chemicals | BuyResearchChems`,
       description: shortDesc,
       keywords: [
         product.name,
-        product.category,
-        'buy ' + product.name.toLowerCase(),
         product.name.toLowerCase() + ' for sale',
+        'buy ' + product.name.toLowerCase(),
+        ...categoryKeywords,
         'research chemicals',
+        'synthetic cannabinoids',
+        'opioids',
+        'nitazenes',
         'BuyResearchChems',
         'high purity',
         'certificate of analysis',
+        'lab verified',
       ],
       alternates: {
         canonical: `/products/${slug}`,

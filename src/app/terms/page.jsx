@@ -3,7 +3,11 @@ import Link from 'next/link';
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://buyresearchchems.com'),
   title: 'Terms & Conditions | BuyResearchChems',
-  description: 'Terms and Conditions for BuyResearchChems â€" Read our terms of service, user agreements, and legal policies for purchasing research chemicals.',
+  description: 'Read the BuyResearchChems Terms and Conditions. Learn our policies for purchasing research chemicals, synthetic cannabinoids, opioids and laboratory-grade compounds.',
+  keywords: [
+    'terms and conditions', 'terms of service', 'BuyResearchChems terms',
+    'research chemicals terms', 'buy research chemicals',
+  ],
   alternates: { canonical: '/terms' },
 };
 
@@ -166,7 +170,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-2xl font-black tracking-tight mb-4">13. Dispute Resolution</h2>
-          <p className="mb-4">Before filing a claim, you agree to contact us at <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">info@buyresearchchems.com</a> to attempt to resolve the dispute informally.</p>
+          <p className="mb-4">Before filing a claim, you agree to contact us at <a href="mailto:order@researchchems.online" className="text-sky-500 hover:underline">order@researchchems.online</a> to attempt to resolve the dispute informally.</p>
           <p className="mb-4">Disputes that cannot be resolved informally shall be resolved through binding arbitration in accordance with applicable rules.</p>
           <p>You agree to resolve disputes on an individual basis and waive the right to participate in class actions or class arbitrations.</p>
         </section>
@@ -195,8 +199,8 @@ export default function TermsPage() {
           <h2 className="text-2xl font-black tracking-tight mb-4">18. Contact Us</h2>
           <p className="mb-5">If you have questions about these Terms, please contact us:</p>
           <div className="border border-gray-200 rounded-xl p-5 space-y-2 text-sm">
-            <p><strong>Email:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">info@buyresearchchems.com</a></p>
-            <p><strong>Website:</strong> <a href="mailto:info@buyresearchchems.com" className="text-sky-500 hover:underline">Email Us</a></p>
+            <p><strong>Email:</strong> <a href="mailto:order@researchchems.online" className="text-sky-500 hover:underline">order@researchchems.online</a></p>
+            <p><strong>Website:</strong> <a href="mailto:order@researchchems.online" className="text-sky-500 hover:underline">Email Us</a></p>
             <p><strong>Response Time:</strong> We aim to respond within 48 hours</p>
           </div>
         </section>

@@ -18,10 +18,8 @@ function LoginForm() {
 
   // Redirect if already logged in
   useEffect(() => {
-    if (isAuthenticated) {
-      router.push(redirect);
-    }
-  }, [isAuthenticated, router, redirect]);
+    router.replace('/');
+  }, [router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

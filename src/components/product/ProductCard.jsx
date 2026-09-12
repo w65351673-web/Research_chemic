@@ -93,7 +93,7 @@ export default function ProductCard({ product }) {
         {/* Price + button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
           <div>
-            <span className="text-gray-900 font-black text-lg">â‚¬{displayPrice.toFixed(2)}</span>
+            <span className="text-gray-900 font-black text-lg">&euro;{displayPrice.toFixed(2)}</span>
             {product.priceVariants && product.priceVariants.length > 1 && (
               <span className="text-gray-900 text-xs ml-1">+</span>
             )}

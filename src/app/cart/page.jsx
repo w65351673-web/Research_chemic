@@ -6,11 +6,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { FaTrash, FaArrowLeft, FaLock, FaShoppingCart } from 'react-icons/fa';
 import { useCart } from '@/components/cart/CartProvider';
-import { useAuth } from '@/components/auth/AuthProvider';
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, clearCart, cartTotal } = useCart();
-  const { isAuthenticated } = useAuth();
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
 
@@ -24,11 +22,7 @@ export default function CartPage() {
   }
 
   const handleCheckout = () => {
-    if (!isAuthenticated) {
-      router.push('/auth/login?redirect=checkout');
-    } else {
-      router.push('/checkout');
-    }
+    router.push('/checkout');
   };
 
   if (cart.length === 0) {
@@ -105,7 +99,7 @@ export default function CartPage() {
                   </div>
 
                   <div className="col-span-4 md:col-span-2 text-gray-900 text-sm text-center">
-                    â‚¬{item.price.toFixed(2)}
+                    &euro;{Number(item.price ?? item.variant?.price ?? 0).toFixed(2)}
                   </div>
 
                   <div className="col-span-5 md:col-span-2">
@@ -126,7 +120,7 @@ export default function CartPage() {
                   </div>
 
                   <div className="col-span-3 md:col-span-2 text-right flex items-center justify-end gap-3">
-                    <span className="text-gray-900 font-semibold text-sm">â‚¬{(item.price * item.quantity).toFixed(2)}</span>
+                    <span className="text-gray-900 font-semibold text-sm">&euro;{(Number(item.price ?? item.variant?.price ?? 0) * item.quantity).toFixed(2)}</span>
                     <button onClick={() => removeFromCart(item.id, item.variant?._id, item.variant?.grams)}
                       className="text-gray-900 hover:text-sky-400 transition-colors">
                       <FaTrash className="text-xs" />
@@ -154,21 +148,21 @@ export default function CartPage() {
               <div className="space-y-3 mb-5 text-sm">
                 <div className="flex justify-between text-gray-900">
                   <span>Subtotal ({cart.length} items)</span>
-                  <span className="text-gray-900 font-medium">â‚¬{cartTotal.toFixed(2)}</span>
+                  <span className="text-gray-900 font-medium">&euro;{Number(cartTotal).toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-gray-900">
                   <span>Shipping</span>
-                  <span className="text-sky-400">Calculated at checkout</span>
+                  <span className="text-sky-400">-</span>
                 </div>
                 <div className="border-t border-gray-700/50 pt-3 flex justify-between">
                   <span className="font-semibold text-gray-900">Estimated Total</span>
-                  <span className="font-bold text-white text-base">â‚¬{cartTotal.toFixed(2)}</span>
+                  <span className="font-bold text-white text-base">&euro;{Number(cartTotal).toFixed(2)}</span>
                 </div>
               </div>
 
               <button onClick={handleCheckout}
                 className="w-full bg-sky-500 hover:bg-sky-500 text-gray-900 font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:-translate-y-0.5 shadow-lg shadow-sky-800/30">
-                <FaLock className="text-xs" /> Proceed to Checkout
+                <FaLock className="text-xs" /> Proceed Order
               </button>
 
               <div className="mt-4 flex items-center justify-center gap-2 text-gray-900 text-xs">

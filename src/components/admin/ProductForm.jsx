@@ -222,7 +222,7 @@ export default function ProductForm({ product = null }) {
           
           <div>
             <label className="block text-gray-400 mb-2" htmlFor="price">
-              Price (€)*
+              Price (&euro;)*
             </label>
             <input
               type="number"

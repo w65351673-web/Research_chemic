@@ -1,5 +1,9 @@
 import { NextResponse } from 'next/server';
-import postmarkClient from '@/lib/postmark';
+import transporter, { FROM_EMAIL, STORE_EMAIL } from '@/lib/mailer';
+
+// Contact/order notification destination
+const CONTACT_FROM_EMAIL = FROM_EMAIL;
+const CONTACT_TO_EMAIL = STORE_EMAIL;
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic';
@@ -27,13 +31,13 @@ export async function POST(request) {
       timeZoneName: 'short'
     });
 
-    // Send email using Postmark
-    const emailResult = await postmarkClient.sendEmail({
-      From: 'info@buyresearchchems.com',
-      To: 'info@buyresearchchems.com',
-      ReplyTo: email, // Add Reply-To header with the sender's email
-      Subject: `🔔 New Contact Form: ${subject}`,
-      TextBody: `
+    // Send email using Gmail
+    const emailResult = await transporter.sendMail({
+      from: `"BuyResearchChems Contact" <${CONTACT_FROM_EMAIL}>`,
+      to: CONTACT_TO_EMAIL,
+      replyTo: email, // Add Reply-To header with the sender's email
+      subject: `🔔 New Contact Form: ${subject}`,
+      text: `
 NEW CONTACT FORM SUBMISSION
 ===========================
 
@@ -49,7 +53,7 @@ ${message}
 ---
 Reply directly to this email to respond to ${name}.
       `,
-      HtmlBody: `
+      html: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -236,29 +240,22 @@ Reply directly to this email to respond to ${name}.
 </body>
 </html>
       `,
-      MessageStream: 'outbound'
+
     });
     
-    console.log('Notification email sent successfully:', emailResult.MessageID);
+    console.log('Notification email sent successfully:', emailResult.messageId);
 
-    // Store the user's email in the notification for replying
-    // Add the user's email to the notification email for easy reply
-    emailResult.To = email;
+    let confirmationResult = { messageId: 'not-sent', status: 'skipped' };
     
-    let confirmationResult = { MessageID: 'not-sent', status: 'skipped' };
-    
-    // Check if user email is same domain (Postmark sandbox restriction)
-    const userDomain = email.split('@')[1];
-    const canSendConfirmation = true;
-    
-    // Try to send confirmation email to the user (only if same domain or Postmark is approved)
-    if (canSendConfirmation) {
+    // Send confirmation email to the user
+    if (true) {
       try {
-        confirmationResult = await postmarkClient.sendEmail({
-            From: 'info@buyresearchchems.com',
-            To: email,
-            Subject: '✅ We received your message - BuyResearchChems',
-          TextBody: `
+        confirmationResult = await transporter.sendMail({
+            from: `"BuyResearchChems" <${CONTACT_FROM_EMAIL}>`,
+            to: email,
+            replyTo: CONTACT_TO_EMAIL,
+            subject: '✅ We received your message - BuyResearchChems',
+            text: `
 Dear ${name},
 
 Thank you for contacting BuyResearchChems!
@@ -270,7 +267,7 @@ Subject: ${subject}
 Message: ${message}
 Sent: ${timestamp}
 
-If you have any urgent questions, please don't hesitate to reach out to us directly at info@buyresearchchems.com.
+If you have any urgent questions, please don't hesitate to reach out to us directly at ${CONTACT_TO_EMAIL}.
 
 Best regards,
 The BuyResearchChems Team
@@ -279,7 +276,7 @@ The BuyResearchChems Team
 BuyResearchChems - Premium Research Chemicals
 Website: https://buyresearchchems.com
           `,
-          HtmlBody: `
+          html: `
 <!DOCTYPE html>
 <html>
 <head>
@@ -455,7 +452,7 @@ Website: https://buyresearchchems.com
       <div class="info-box">
         <p>
           <strong>💡 Need urgent assistance?</strong><br>
-          Contact us directly at <a href="mailto:info@buyresearchchems.com" style="color: #dc2626;">info@buyresearchchems.com</a>
+          Contact us directly at <a href="mailto:${CONTACT_TO_EMAIL}" style="color: #dc2626;">${CONTACT_TO_EMAIL}</a>
         </p>
       </div>
 
@@ -489,14 +486,14 @@ Website: https://buyresearchchems.com
 </body>
 </html>
           `,
-          MessageStream: 'outbound'
+    
         });
         
-        console.log('Confirmation email sent successfully:', confirmationResult.MessageID);
+        console.log('Confirmation email sent successfully:', confirmationResult.messageId);
       } catch (confirmError) {
         console.warn('Could not send confirmation email:', confirmError.message);
         confirmationResult = { 
-          MessageID: 'failed', 
+          messageId: 'failed', 
           status: 'error', 
           error: confirmError.message 
         };
@@ -504,7 +501,7 @@ Website: https://buyresearchchems.com
     } else {
       console.log(`Skipping confirmation email to ${email} - Postmark account pending approval (sandbox mode)`);
       confirmationResult = { 
-        MessageID: 'skipped', 
+        messageId: 'skipped', 
         status: 'skipped',
         reason: 'Postmark sandbox mode - only same domain emails allowed'
       };
@@ -515,11 +512,11 @@ Website: https://buyresearchchems.com
       message: 'Message sent successfully', 
       details: {
         notificationEmail: {
-          messageId: emailResult.MessageID,
+          messageId: emailResult.messageId,
           status: 'sent'
         },
         confirmationEmail: {
-          messageId: confirmationResult.MessageID,
+          messageId: confirmationResult.messageId,
           status: confirmationResult.status || 'sent',
           recipient: email,
           reason: confirmationResult.reason || null

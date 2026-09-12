@@ -35,12 +35,12 @@ export default function FAQPage() {
     {
       category: 'ordering',
       question: 'What payment methods do you accept?',
-      answer: 'We accept various payment methods including bank transfer, cryptocurrency (Bitcoin, Ethereum), and other secure payment options. Contact us at info@buyresearchchems.com after placing your order to receive specific payment instructions for your preferred method.'
+      answer: 'We accept various payment methods including bank transfer, cryptocurrency (Bitcoin, Ethereum), and other secure payment options. Contact us at order@researchchems.online after placing your order to receive specific payment instructions for your preferred method.'
     },
     {
       category: 'ordering',
       question: 'How do I pay for my order?',
-      answer: 'After adding items to your cart and proceeding to checkout, you\'ll need to contact us at info@buyresearchchems.com for payment instructions. We\'ll respond within 24 hours with detailed instructions for your chosen payment method. Once payment is confirmed, we\'ll process and ship your order.'
+      answer: 'After adding items to your cart and proceeding to checkout, you\'ll need to contact us at order@researchchems.online for payment instructions. We\'ll respond within 24 hours with detailed instructions for your chosen payment method. Once payment is confirmed, we\'ll process and ship your order.'
     },
     {
       category: 'ordering',
@@ -50,12 +50,12 @@ export default function FAQPage() {
     {
       category: 'ordering',
       question: 'Can I cancel my order after placing it?',
-      answer: 'You can cancel your order for a full refund only if it hasn\'t been processed or shipped yet. Orders are typically processed within 24-48 hours. Contact us immediately at info@buyresearchchems.com with your order number if you need to cancel.'
+      answer: 'You can cancel your order for a full refund only if it hasn\'t been processed or shipped yet. Orders are typically processed within 24-48 hours. Contact us immediately at order@researchchems.online with your order number if you need to cancel.'
     },
     {
       category: 'ordering',
       question: 'Do you offer bulk discounts?',
-      answer: 'Yes! We offer volume discounts for bulk orders. Contact us at info@buyresearchchems.com with details about the products and quantities you need, and we\'ll provide a custom quote.'
+      answer: 'Yes! We offer volume discounts for bulk orders. Contact us at order@researchchems.online with details about the products and quantities you need, and we\'ll provide a custom quote.'
     },
     {
       category: 'ordering',
@@ -72,12 +72,12 @@ export default function FAQPage() {
     {
       category: 'shipping',
       question: 'Do you offer free shipping?',
-      answer: 'Yes! We offer FREE standard shipping on all orders over â‚¬100. For orders under â‚¬100, standard shipping is â‚¬15 within the country.'
+      answer: 'Yes! We offer FREE standard shipping on all orders over \u20AC100. For orders under \u20AC100, standard shipping is \u20AC15 within the country.'
     },
     {
       category: 'shipping',
       question: 'Do you ship internationally?',
-      answer: 'Yes, we ship to most countries worldwide. Shipping costs vary by destination: Europe (â‚¬25), North America (â‚¬45), Rest of World (â‚¬60). Please note that you are responsible for any customs duties or import taxes.'
+      answer: 'Yes, we ship to most countries worldwide. Shipping costs vary by destination: Europe (\u20AC25), North America (\u20AC45), Rest of World (\u20AC60). Please note that you are responsible for any customs duties or import taxes.'
     },
     {
       category: 'shipping',
@@ -92,7 +92,7 @@ export default function FAQPage() {
     {
       category: 'shipping',
       question: 'What if my package is lost or stolen?',
-      answer: 'If your package is marked as delivered but you haven\'t received it, wait 24-48 hours and check with neighbors or building management. If still missing, contact us immediately at info@buyresearchchems.com with your tracking number.'
+      answer: 'If your package is marked as delivered but you haven\'t received it, wait 24-48 hours and check with neighbors or building management. If still missing, contact us immediately at order@researchchems.online with your tracking number.'
     },
 
     // Products & Quality
@@ -114,7 +114,7 @@ export default function FAQPage() {
     {
       category: 'products',
       question: 'Can I request a Certificate of Analysis (COA)?',
-      answer: 'Yes! Contact us at info@buyresearchchems.com with your order number and product name, and we\'ll provide the COA for your batch within 24-48 hours.'
+      answer: 'Yes! Contact us at order@researchchems.online with your order number and product name, and we\'ll provide the COA for your batch within 24-48 hours.'
     },
     {
       category: 'products',
@@ -156,7 +156,7 @@ export default function FAQPage() {
     {
       category: 'account',
       question: 'How do I delete my account?',
-      answer: 'Contact us at info@buyresearchchems.com with your account email and request account deletion. We\'ll process your request within 7 business days. Note that order history may be retained for legal compliance.'
+      answer: 'Contact us at order@researchchems.online with your account email and request account deletion. We\'ll process your request within 7 business days. Note that order history may be retained for legal compliance.'
     },
 
     // Returns & Refunds
@@ -190,7 +190,7 @@ export default function FAQPage() {
     {
       category: 'ordering',
       question: 'Do you have a minimum order amount?',
-      answer: 'No, there is no minimum order amount. However, orders over â‚¬100 qualify for free standard shipping.'
+      answer: 'No, there is no minimum order amount. However, orders over \u20AC100 qualify for free standard shipping.'
     },
     {
       category: 'products',
@@ -200,17 +200,17 @@ export default function FAQPage() {
     {
       category: 'shipping',
       question: 'Can I change my shipping address after ordering?',
-      answer: 'Contact us immediately at info@buyresearchchems.com if you need to change your shipping address. We can only modify the address if the order hasn\'t been shipped yet.'
+      answer: 'Contact us immediately at order@researchchems.online if you need to change your shipping address. We can only modify the address if the order hasn\'t been shipped yet.'
     },
     {
       category: 'account',
       question: 'Do you offer customer support?',
-      answer: 'Yes! Contact us via email at info@buyresearchchems.com, use our contact form, or chat with us using the LiveChat widget. We typically respond within 24 hours.'
+      answer: 'Yes! Contact us via email at order@researchchems.online, use our contact form, or chat with us using the LiveChat widget. We typically respond within 24 hours.'
     },
     {
       category: 'ordering',
       question: 'Can I order by phone?',
-      answer: 'Currently, we only accept orders through our website for security and accuracy. If you need assistance placing an order, contact us at info@buyresearchchems.com and we\'ll guide you through the process.'
+      answer: 'Currently, we only accept orders through our website for security and accuracy. If you need assistance placing an order, contact us at order@researchchems.online and we\'ll guide you through the process.'
     },
   ];
 
@@ -328,11 +328,11 @@ export default function FAQPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-2">Still have questions?</h2>
           <p className="text-gray-900 text-sm mb-6">Our support team typically responds within 24 hours.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="mailto:info@buyresearchchems.com"
+            <a href="mailto:order@researchchems.online"
               className="inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-500 text-gray-900 font-semibold py-3 px-6 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-sky-800/30 text-sm">
               Contact Support
             </a>
-            <a href="mailto:info@buyresearchchems.com"
+            <a href="mailto:order@researchchems.online"
               className="inline-flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-700 border border-gray-700 text-gray-900 font-semibold py-3 px-6 rounded-xl transition-colors text-sm">
               Email Us
             </a>

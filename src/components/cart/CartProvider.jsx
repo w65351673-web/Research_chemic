@@ -76,7 +76,7 @@ export default function CartProvider({ children }) {
       return [...prevCart, {
         id: product._id,
         name: product.name,
-        price: selectedVariant ? selectedVariant.price : product.price,
+        price: Number(selectedVariant ? selectedVariant.price : (product.price ?? product.priceVariants?.[0]?.price ?? 0)),
         image: product.images[0],
         quantity,
         variant: selectedVariant || null

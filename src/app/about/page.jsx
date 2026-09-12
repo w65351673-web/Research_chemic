@@ -170,7 +170,7 @@ export default function AboutPage() {
             <Link href="/products" className="group inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white font-bold px-8 py-3.5 rounded-2xl transition-all hover:-translate-y-0.5 text-sm shadow-lg shadow-sky-500/20">
               Browse Products <HiOutlineArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
             </Link>
-            <a href="mailto:info@buyresearchchems.com" className="inline-flex items-center gap-2 border border-gray-300 text-gray-900 hover:text-sky-600 hover:border-sky-400 font-bold px-8 py-3.5 rounded-2xl transition-all hover:-translate-y-0.5 text-sm">
+            <a href="mailto:order@researchchems.online" className="inline-flex items-center gap-2 border border-gray-300 text-gray-900 hover:text-sky-600 hover:border-sky-400 font-bold px-8 py-3.5 rounded-2xl transition-all hover:-translate-y-0.5 text-sm">
               Contact Us
             </a>
           </div>

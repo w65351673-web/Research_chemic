@@ -87,7 +87,7 @@ export default function AdminDashboard() {
     {
       icon: FaEuroSign,
       label: 'Total Revenue',
-      value: `€${typeof stats.totalRevenue === 'number' ? stats.totalRevenue.toFixed(2) : '0.00'}`,
+      value: `\u20AC${typeof stats.totalRevenue === 'number' ? stats.totalRevenue.toFixed(2) : '0.00'}`,
       href: null,
       linkLabel: 'All-time sales',
       accent: 'green',
@@ -231,7 +231,7 @@ export default function AdminDashboard() {
                         {new Date(order.createdAt || Date.now()).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
                       </td>
                       <td className="px-6 py-4 text-white font-semibold text-sm">
-                        €{(order.total || order.totalPrice || 0).toFixed(2)}
+                        &euro;{(order.total || order.totalPrice || 0).toFixed(2)}
                       </td>
                       <td className="px-6 py-4">
                         <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${s.bg} ${s.text}`}>
