@@ -12,9 +12,9 @@ import toast from 'react-hot-toast';
 
 export default function ProductDetailPage() {
   const pricingTiers = [
-    { quantity: 25, price: 400 },
-    { quantity: 50, price: 550 },
-    { quantity: 100, price: 700 },
+    { quantity: 25, price: 250 },
+    { quantity: 50, price: 400 },
+    { quantity: 100, price: 650 },
     { quantity: 500, price: 1200 },
     { quantity: 1000, price: 2100 },
   ];
