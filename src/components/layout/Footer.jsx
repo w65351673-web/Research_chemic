@@ -62,7 +62,7 @@ export default function Footer() {
               <a href="mailto:order@researchchems.online" className="flex items-center gap-2.5 text-sm text-gray-900 hover:text-sky-500 transition-colors">
                 <FaEnvelope className="text-sky-500 text-xs shrink-0" /> order@researchchems.online
               </a>
-              <a href="https://wa.me/16193086713" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-900 hover:text-emerald-400 transition-colors">
+              <a href="https://wa.me/447412825167" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-900 hover:text-emerald-400 transition-colors">
                 <FaWhatsapp className="text-emerald-700 text-xs shrink-0" /> WhatsApp Support
               </a>
             </div>

@@ -1,7 +1,7 @@
 import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
 export default function WhatsAppButton() {
-  const whatsappNumber = '16193086713'; // +1 619 308 6713
+  const whatsappNumber = '447412825167'; // +44 7412 825167
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
   const emailAddress = 'order@researchchems.online'; // Active order email
 
