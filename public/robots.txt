@@ -22,4 +22,4 @@ Disallow: /auth/
 Disallow: /auth/*
 Disallow: /login
 
-Sitemap: https://researchchems.online/sitemap.xml
+Sitemap: https://www.researchchems.online/sitemap.xml
